@@ -25,6 +25,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Incremental Search
+set incsearch
+
 " Search Highlighting
 set hlsearch
 
