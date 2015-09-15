@@ -17,6 +17,8 @@ Plugin 'scrooloose/nerdcommenter'
 
 Bundle 'altercation/vim-colors-solarized' 
 
+Bundle 'gregsexton/MatchTag'
+
 if v:version >= 704
     Plugin 'Valloric/YouCompleteMe'
 endif
