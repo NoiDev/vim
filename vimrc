@@ -21,6 +21,8 @@ Bundle 'gregsexton/MatchTag'
 
 Bundle 'tpope/vim-repeat.git'
 
+Bundle 'tpope/vim-unimpaired'
+
 if v:version >= 704
     Plugin 'Valloric/YouCompleteMe'
 endif
