@@ -19,6 +19,8 @@ Bundle 'altercation/vim-colors-solarized'
 
 Bundle 'gregsexton/MatchTag'
 
+Bundle 'tpope/vim-repeat.git'
+
 if v:version >= 704
     Plugin 'Valloric/YouCompleteMe'
 endif
