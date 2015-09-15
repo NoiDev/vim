@@ -15,6 +15,8 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'scrooloose/nerdcommenter'
 
+Bundle 'altercation/vim-colors-solarized' 
+
 if v:version >= 704
     Plugin 'Valloric/YouCompleteMe'
 endif
@@ -29,7 +31,10 @@ let mapleader = "\<Space>"
 filetype plugin indent on
 
 " Syntax Highlighting
-if filereadable( expand('$HOME/.vim/colors/ir_black.vim') )
+if filereadable( expand('$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim') )
+    colo solarized
+    set background=dark 
+elseif filereadable( expand('$HOME/.vim/colors/ir_black.vim') )
     colo ir_black
 else
     colo darkblue
@@ -69,3 +74,4 @@ if has("wildmenu")
     set wildmenu
     set wildmode=longest,list
 endif
+
