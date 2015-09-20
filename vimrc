@@ -15,13 +15,13 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'scrooloose/nerdcommenter'
 
-Bundle 'altercation/vim-colors-solarized' 
+Plugin 'altercation/vim-colors-solarized' 
 
-Bundle 'gregsexton/MatchTag'
+Plugin 'gregsexton/MatchTag'
 
-Bundle 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-repeat.git'
 
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-unimpaired'
 
 if v:version >= 704
     Plugin 'Valloric/YouCompleteMe'
@@ -37,15 +37,19 @@ let mapleader = "\<Space>"
 filetype plugin indent on
 
 " Syntax Highlighting
+syntax enable
+set background=dark
+
+"if has("gui_running") && filereadable( expand('$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim') )
 if filereadable( expand('$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim') )
-    colo solarized
     set background=dark 
+    colo solarized
 elseif filereadable( expand('$HOME/.vim/colors/ir_black.vim') )
     colo ir_black
 else
     colo darkblue
 endif
-syntax on
+
 
 " @todo(Noah): Fonts
 " Consolas Regular
@@ -65,6 +69,9 @@ set incsearch
 
 " Search Highlighting
 set hlsearch
+
+" Scrolloff
+set scrolloff=3
 
 " Enter Clears Current Search Highlighting
 " @todo(Noah): Look into a different hotkey
