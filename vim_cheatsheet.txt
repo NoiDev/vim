@@ -1,0 +1,95 @@
+Current Vim Repetoire
+
+General Movement:
+
+w  - go to next word
+b  - go to previous word
+
+W  - go to next word preceded by whitespace
+B  - go to previous word preceded by whitespace
+
+)  - next sentence
+(  - previous sentence
+
+}  - next paragraph
+{  - previous paragraph
+
+0  - beginning of line
+$  - end of line
+
+gg - begining of file
+G  - end of file
+
+
+Goto:
+
+*  - go to next occurence of word under cursor
+#  - go to previous occurence of word under cursor
+%  - go to matching enclosure (, [, {, etc. 
+ta - go to the character before the next 'a' (same line)  
+fa - go to the next 'a' (same line)
+
+
+Search:
+
+/  - search for string or pattern
+
+n  - go to next occurence of search
+N  - go to previous occurence of search
+
+
+Repace (Substitute):
+
+:%s/foo/bar/gc - Change each 'foo' to 'bar'; ask for confirmation on each first.  
+
+Undo/Redo:
+
+.  - repeat last change
+u  - undo last command
+<CTRL>-r - redo last undo 
+
+Visual Mode:
+
+v  - enter character-wise visual mode
+V  - enter line-wise visual mode
+
+
+Operators:
+
+d  - delete selection and store in buffer
+c  - change (delete selection and store in buffer, then enter insert mode)
+y  - copy selection to buffer
+P  - paste from top of buffer
+
+>  - indent
+<  - outdent
+=  - match indentation
+
+
+Macros:
+- related hotkeys: q, @
+
+qa - start recording macro to buffer 'a'
+q  - stop recording macro
+
+@a - execute macro in buffer 'a'
+@@ - re-execute last macro
+
+
+Tabs:
+
+:new [file] - create new window
+
+[ctrl-w] - switch tabs
+
+
+Special:
+
+:set list   - Show (most) invisibles
+:set nolist - Hide invisibles
+
+Note:  The combination of these two is mapped to @C
+:retab      - Convert tab characters to equivalent number of spaces
+:%s/\s\+$// - Trim Whitespace  
+
+:s/= \(.*\)\/\/\(.*\)$/= \2\/\/\1  - Swap commentented and uncomment code following an equal sign (e.g. foo = uncommented; // commented  => foo = commentted; // uncommented )
